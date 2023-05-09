@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐾</title>
+
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* .footer {
+            position: fixed;
+            left: 0;
+            bottom: 15px;
+            width: 100%;
+            text-align: center;
+        } */
+
+        .btn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="wrapper">
+        <h1> Are you happy or sad ?</h1>
+        <div>
+            <button onclick="beHappy('happy')" class="btn"> Happy</button>
+            <button onclick="beHappy('sad')" class="btn"> Sad</button>
+
+        </div>
+        <h2 id="sadTxt"></h2>
+        <div>
+            <video id="catVideo" autoplay loop></video>
+        </div>
+
+    </section>
+    <!-- <footer class="footer">
+        created with happy face by <a href="http://twitter.com/jagdishpatil02" target="_blank">Jagdish </a>🐾
+
+    </footer> -->
+</body>
+<script>
+    let sadEle = document.getElementById('sadTxt');
+    let catVideoEle = document.getElementById('catVideo');
+    function beHappy(emotion) {
+        emotion == 'sad' ? sadEle.innerText = `don't be sad just 👇` : sadEle.innerText = '';
+        catVideoEle.src = 'https://www.videomeme.in/wp-content/uploads/2023/04/happy-happy-happy-cat.mp4';
+    }
+</script>
+
+</html>
